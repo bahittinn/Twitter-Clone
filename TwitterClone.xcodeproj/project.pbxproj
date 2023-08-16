@@ -19,6 +19,7 @@
 		64BC61E62A8CE0FF001C008D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61E52A8CE0FF001C008D /* FeedController.swift */; };
 		64BC61E82A8CF1D0001C008D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61E72A8CF1D0001C008D /* Extensions.swift */; };
 		64BC61EC2A8D3DCF001C008D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61EB2A8D3DCF001C008D /* LoginController.swift */; };
+		64BC61EE2A8D3ED5001C008D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61ED2A8D3ED5001C008D /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		64BC61E52A8CE0FF001C008D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		64BC61E72A8CF1D0001C008D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		64BC61EB2A8D3DCF001C008D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		64BC61ED2A8D3ED5001C008D /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				64BC61EB2A8D3DCF001C008D /* LoginController.swift */,
+				64BC61ED2A8D3ED5001C008D /* RegistrationController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				64BC61DC2A8C05BE001C008D /* MainTabController.swift in Sources */,
 				64BC61E02A8CE0A3001C008D /* ExplorerController.swift in Sources */,
 				64BC61C42A8C02E4001C008D /* SceneDelegate.swift in Sources */,
+				64BC61EE2A8D3ED5001C008D /* RegistrationController.swift in Sources */,
 				64BC61E62A8CE0FF001C008D /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
