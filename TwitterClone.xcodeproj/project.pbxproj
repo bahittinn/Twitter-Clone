@@ -17,6 +17,7 @@
 		64BC61E22A8CE0D1001C008D /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61E12A8CE0D1001C008D /* NotificationsController.swift */; };
 		64BC61E42A8CE0EB001C008D /* ConvarsationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61E32A8CE0EB001C008D /* ConvarsationsController.swift */; };
 		64BC61E62A8CE0FF001C008D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61E52A8CE0FF001C008D /* FeedController.swift */; };
+		64BC61E82A8CF1D0001C008D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61E72A8CF1D0001C008D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		64BC61E12A8CE0D1001C008D /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		64BC61E32A8CE0EB001C008D /* ConvarsationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvarsationsController.swift; sourceTree = "<group>"; };
 		64BC61E52A8CE0FF001C008D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		64BC61E72A8CF1D0001C008D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		64BC61DA2A8C04F3001C008D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				64BC61E72A8CF1D0001C008D /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				64BC61E22A8CE0D1001C008D /* NotificationsController.swift in Sources */,
 				64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */,
 				64BC61E42A8CE0EB001C008D /* ConvarsationsController.swift in Sources */,
+				64BC61E82A8CF1D0001C008D /* Extensions.swift in Sources */,
 				64BC61DC2A8C05BE001C008D /* MainTabController.swift in Sources */,
 				64BC61E02A8CE0A3001C008D /* ExplorerController.swift in Sources */,
 				64BC61C42A8C02E4001C008D /* SceneDelegate.swift in Sources */,
