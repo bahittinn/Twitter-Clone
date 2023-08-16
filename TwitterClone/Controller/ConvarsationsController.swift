@@ -1,13 +1,13 @@
 //
-//  MainTabController.swift
+//  ConvarsationsController.swift
 //  TwitterClone
 //
-//  Created by Bahittin on 15.08.2023.
+//  Created by Bahittin on 16.08.2023.
 //
 
 import UIKit
 
-class MainTabController: UITabBarController {
+class ConvarsationsController: UIViewController {
 
     //MARK: - Properties
     
@@ -20,8 +20,5 @@ class MainTabController: UITabBarController {
     }
     
     //MARK: - Helpers
-    
-    func configureViewControllers() {
-        
-    }
+
 }
