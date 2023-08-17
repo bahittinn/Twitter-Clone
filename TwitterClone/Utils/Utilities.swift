@@ -50,7 +50,17 @@ class Utilities {
                                                                      NSAttributedString.Key.foregroundColor: UIColor.white]))
         
         button.setAttributedTitle(attributedTitle, for: .normal)
-        
+        return button
+    }
+    
+    func sameButton(_ title: String) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.backgroundColor = .white
+        button.heightAnchor.constraint(equalToConstant: 45).isActive = true
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         return button
     }
 }

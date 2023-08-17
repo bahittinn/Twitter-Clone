@@ -10,6 +10,69 @@ import UIKit
 class RegistrationController: UIViewController {
     //MARK: - Properties
     
+    private let plusLogoButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "plus_photo"), for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(handleAddProfileImage), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var emailContainerView: UIView = {
+        let image = UIImage(named: "ic_mail_outline_white_2x-1")
+        let view = Utilities().inputContainerView(withImage: image, textField: emailTextField)
+        return view
+    }()
+    
+    private lazy var passwordContainerView: UIView = {
+        let image = UIImage(named: "ic_lock_outline_white_2x")
+        let view = Utilities().inputContainerView(withImage: image, textField: passwordTextField)
+        return view
+    }()
+    
+    private lazy var fullnameContainerView: UIView = {
+        let image = UIImage(named: "ic_mail_outline_white_2x-1")
+        let view = Utilities().inputContainerView(withImage: image, textField: fullnameTextField)
+        return view
+    }()
+    
+    private lazy var usernameContainerView: UIView = {
+        let image = UIImage(named: "ic_lock_outline_white_2x")
+        let view = Utilities().inputContainerView(withImage: image, textField: usernameTextField)
+        return view
+    }()
+    
+    private let emailTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Email")
+        return tf
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Password")
+        return tf
+    }()
+    
+    private let fullnameTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Full Name")
+        return tf
+    }()
+    
+    private let usernameTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "User Name")
+        return tf
+    }()
+    
+    private let alreadyHaveAccountButton: UIButton = {
+        let button = Utilities().attributedButton("Already have an account", " Log In")
+        button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+        return button
+    }()
+    
+    private let signUpButton: UIButton = {
+        let button = Utilities().sameButton("Sign Up")
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        return button
+    }()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -19,11 +82,43 @@ class RegistrationController: UIViewController {
     
     //MARK: - Selectors
     
+    @objc func handleAddProfileImage() {
+        
+    }
+    
+    @objc func handleShowLogin() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func handleSignUp() {
+        
+    }
     
     //MARK: - helpers
     
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        
+        view.addSubview(plusLogoButton)
+        plusLogoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
+        plusLogoButton.setDimensions(width: 128, height: 128)
+        
+        let stack = UIStackView(arrangedSubviews: [emailContainerView,
+                                                   passwordContainerView,
+                                                   fullnameContainerView,
+                                                   usernameContainerView,
+                                                   signUpButton])
+        stack.axis = .vertical
+        stack.spacing = 20
+        stack.distribution = .fillEqually
+        
+        view.addSubview(stack)
+        stack.anchor(top: plusLogoButton.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor,
+                     paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+        
+        view.addSubview(alreadyHaveAccountButton)
+        alreadyHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor,
+                                        paddingLeft: 40,paddingRight: 40)
     }
     
 }
