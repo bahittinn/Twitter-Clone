@@ -104,13 +104,21 @@ class RegistrationController: UIViewController {
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullnameTextField.text else { return }
         guard let username = usernameTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { (response, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 print("DEBUG: Error : \(error.localizedDescription) ")
                 return
             }
             
-            print("new account added")
+            guard let uid = result?.user.uid else { return }
+            
+            let values = ["email": email, "username": username, "fullanem": fullname]
+            
+            let ref = Database.database().reference().child("users").child(uid)
+            
+            ref.updateChildValues(values) { (error, ref) in
+                print("DEBUG: info updated")
+            }
         }
     }
     
