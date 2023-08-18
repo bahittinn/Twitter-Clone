@@ -26,6 +26,7 @@
 		64E09C552A8E910000A6C8FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 64E09C542A8E910000A6C8FB /* FirebaseDatabase */; };
 		64E09C572A8E910000A6C8FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 64E09C562A8E910000A6C8FB /* FirebaseFirestore */; };
 		64E09C592A8E910000A6C8FB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 64E09C582A8E910000A6C8FB /* FirebaseStorage */; };
+		64E09C5B2A8F654B00A6C8FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E09C5A2A8F654B00A6C8FB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		64BC61ED2A8D3ED5001C008D /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		64BC61EF2A8D6822001C008D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		64E09C4F2A8E8F1300A6C8FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64E09C5A2A8F654B00A6C8FB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				64BC61E72A8CF1D0001C008D /* Extensions.swift */,
 				64BC61EF2A8D6822001C008D /* Utilities.swift */,
+				64E09C5A2A8F654B00A6C8FB /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				64BC61C42A8C02E4001C008D /* SceneDelegate.swift in Sources */,
 				64BC61EE2A8D3ED5001C008D /* RegistrationController.swift in Sources */,
 				64BC61E62A8CE0FF001C008D /* FeedController.swift in Sources */,
+				64E09C5B2A8F654B00A6C8FB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
