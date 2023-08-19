@@ -72,7 +72,7 @@ class LoginController: UIViewController {
                 return
             }
             
-            print("Logged in")
+            print("DEBUG: Logged in")
         }
     }
     
