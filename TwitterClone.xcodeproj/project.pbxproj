@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		645396A92A8F9246001844F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645396A82A8F9246001844F2 /* AuthService.swift */; };
+		64B63B682A91D76500243836 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B63B672A91D76500243836 /* UserService.swift */; };
 		64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61C12A8C02E4001C008D /* AppDelegate.swift */; };
 		64BC61C42A8C02E4001C008D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61C32A8C02E4001C008D /* SceneDelegate.swift */; };
 		64BC61C92A8C02E4001C008D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64BC61C72A8C02E4001C008D /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		645396A82A8F9246001844F2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		64B63B672A91D76500243836 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		64BC61BE2A8C02E4001C008D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BC61C12A8C02E4001C008D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64BC61C32A8C02E4001C008D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				645396A82A8F9246001844F2 /* AuthService.swift */,
+				64B63B672A91D76500243836 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B63B682A91D76500243836 /* UserService.swift in Sources */,
 				64BC61E22A8CE0D1001C008D /* NotificationsController.swift in Sources */,
 				64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */,
 				64BC61F02A8D6822001C008D /* Utilities.swift in Sources */,
