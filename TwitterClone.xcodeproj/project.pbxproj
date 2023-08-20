@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6437232D2A929CB40077131C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437232C2A929CB40077131C /* User.swift */; };
 		645396A92A8F9246001844F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645396A82A8F9246001844F2 /* AuthService.swift */; };
 		64B63B682A91D76500243836 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B63B672A91D76500243836 /* UserService.swift */; };
 		64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61C12A8C02E4001C008D /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6437232C2A929CB40077131C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		645396A82A8F9246001844F2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		64B63B672A91D76500243836 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		64BC61BE2A8C02E4001C008D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 		64BC61D92A8C04CC001C008D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6437232C2A929CB40077131C /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				64BC61E82A8CF1D0001C008D /* Extensions.swift in Sources */,
 				64BC61EC2A8D3DCF001C008D /* LoginController.swift in Sources */,
 				645396A92A8F9246001844F2 /* AuthService.swift in Sources */,
+				6437232D2A929CB40077131C /* User.swift in Sources */,
 				64BC61DC2A8C05BE001C008D /* MainTabController.swift in Sources */,
 				64BC61E02A8CE0A3001C008D /* ExplorerController.swift in Sources */,
 				64BC61C42A8C02E4001C008D /* SceneDelegate.swift in Sources */,

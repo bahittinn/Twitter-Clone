@@ -17,6 +17,8 @@ struct UserService {
             guard let dictonary = snapshot.value as? [String: AnyObject] else { return }
             guard let username = dictonary["username"] as? String else { return }
             print("DEBUG: username is \(username)")
+            
+            let user = User(uid: uid, dictionary: dictonary)
         }
     }
 }
