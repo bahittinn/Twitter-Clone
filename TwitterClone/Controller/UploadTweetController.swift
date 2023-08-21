@@ -76,19 +76,20 @@ class UploadTweetController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         configureNavigationBar()
-        configureImageView()
+        let stack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
+        stack.axis = .horizontal
+        stack.spacing = 12
+        
+        view.addSubview(stack)
+        
+        stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,right: view.rightAnchor, paddingTop: 16, paddingLeft: 16,paddingRight: 16)
+        guard let url = URL(string: user.profileImageUrl) else { return }
+        profileImageView.sd_setImage(with: url)
     }
     
     func configureNavigationBar() {
         navigationController?.navigationBar.tintColor = .twitterBlue
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: actionButton)
-    }
-    
-    func configureImageView() {
-        view.addSubview(profileImageView)
-        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 16, paddingLeft: 16)
-        guard let url = URL(string: user.profileImageUrl) else { return }
-        profileImageView.sd_setImage(with: url)
     }
 }
