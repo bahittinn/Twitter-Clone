@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6437232D2A929CB40077131C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437232C2A929CB40077131C /* User.swift */; };
 		643723302A92A5310077131C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6437232F2A92A5310077131C /* SDWebImage */; };
+		643FFD652A93F0FF00D348E1 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */; };
 		645396A92A8F9246001844F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645396A82A8F9246001844F2 /* AuthService.swift */; };
 		64B63B682A91D76500243836 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B63B672A91D76500243836 /* UserService.swift */; };
 		64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61C12A8C02E4001C008D /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		6437232C2A929CB40077131C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		645396A82A8F9246001844F2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		64B63B672A91D76500243836 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		64BC61BE2A8C02E4001C008D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				64BC61DF2A8CE0A3001C008D /* ExplorerController.swift */,
 				64BC61E12A8CE0D1001C008D /* NotificationsController.swift */,
 				64BC61E32A8CE0EB001C008D /* ConvarsationsController.swift */,
+				643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				64BC61E82A8CF1D0001C008D /* Extensions.swift in Sources */,
 				64BC61EC2A8D3DCF001C008D /* LoginController.swift in Sources */,
 				645396A92A8F9246001844F2 /* AuthService.swift in Sources */,
+				643FFD652A93F0FF00D348E1 /* UploadTweetController.swift in Sources */,
 				6437232D2A929CB40077131C /* User.swift in Sources */,
 				64BC61DC2A8C05BE001C008D /* MainTabController.swift in Sources */,
 				64BC61E02A8CE0A3001C008D /* ExplorerController.swift in Sources */,
