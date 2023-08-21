@@ -10,6 +10,7 @@
 		6437232D2A929CB40077131C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437232C2A929CB40077131C /* User.swift */; };
 		643723302A92A5310077131C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6437232F2A92A5310077131C /* SDWebImage */; };
 		643FFD652A93F0FF00D348E1 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */; };
+		643FFD672A93FFC000D348E1 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643FFD662A93FFC000D348E1 /* CaptionTextView.swift */; };
 		645396A92A8F9246001844F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645396A82A8F9246001844F2 /* AuthService.swift */; };
 		64B63B682A91D76500243836 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B63B672A91D76500243836 /* UserService.swift */; };
 		64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61C12A8C02E4001C008D /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		6437232C2A929CB40077131C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		643FFD662A93FFC000D348E1 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		645396A82A8F9246001844F2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		64B63B672A91D76500243836 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		64BC61BE2A8C02E4001C008D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 		64BC61D82A8C04C6001C008D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				643FFD662A93FFC000D348E1 /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				64B63B682A91D76500243836 /* UserService.swift in Sources */,
 				64BC61E22A8CE0D1001C008D /* NotificationsController.swift in Sources */,
+				643FFD672A93FFC000D348E1 /* CaptionTextView.swift in Sources */,
 				64BC61C22A8C02E4001C008D /* AppDelegate.swift in Sources */,
 				64BC61F02A8D6822001C008D /* Utilities.swift in Sources */,
 				64BC61E42A8CE0EB001C008D /* ConvarsationsController.swift in Sources */,
