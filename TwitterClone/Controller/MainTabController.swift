@@ -70,6 +70,7 @@ class MainTabController: UITabBarController {
     //MARK: - Selector
     @objc func actionButtonTapped() {
         let nav = UINavigationController(rootViewController: UploadTweetController())
+        nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true)
     }
     
