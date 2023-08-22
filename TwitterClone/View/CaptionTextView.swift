@@ -5,6 +5,7 @@
 //  Created by Bahittin on 21.08.2023.
 //
 
+
 import UIKit
 
 class CaptionTextView: UITextView {
