@@ -8,7 +8,9 @@
 import UIKit
 import SDWebImage
 
-class FeedController: UIViewController {
+private let reuseIdentifier = "TweetCell"
+
+class FeedController: UICollectionViewController {
 
     //MARK: - Properties
     
@@ -24,12 +26,12 @@ class FeedController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.register(TweetCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         configureUI()
         fetchTweets()
     }
     
     //MARK: - API
-    
     func fetchTweets() {
         TweetService.shared.fetchTweets { tweets in
             print("DEBUG: tweets is \(tweets[0].caption)")
@@ -42,6 +44,8 @@ class FeedController: UIViewController {
         guard let user = user else { return }
         
         view.backgroundColor = .white
+        
+      
         
         let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageView.contentMode = .scaleAspectFit
@@ -58,5 +62,16 @@ class FeedController: UIViewController {
         guard let url = URL(string: user!.profileImageUrl) else { return }
         profileImageView.sd_setImage(with: url)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView )
+    }
+}
+extension FeedController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        as! TweetCell
+        return cell
     }
 }
