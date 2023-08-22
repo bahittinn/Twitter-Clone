@@ -15,7 +15,7 @@ struct Tweet {
     let uid: String
     let retweetCount: Int
     
-    init(tweetID: String, dictionary: [String: AnyObject]) {
+    init(tweetID: String, dictionary: [String: Any]) {
         self.tweetID = tweetID
         
         self.caption = dictionary["caption"] as? String ?? ""
