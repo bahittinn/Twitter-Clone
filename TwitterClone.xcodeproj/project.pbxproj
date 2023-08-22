@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6437232D2A929CB40077131C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437232C2A929CB40077131C /* User.swift */; };
 		643723302A92A5310077131C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6437232F2A92A5310077131C /* SDWebImage */; };
+		643CB1F22A952AAA00A20681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 643CB1F12A952AAA00A20681 /* GoogleService-Info.plist */; };
+		643CB1F42A952AF000A20681 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643CB1F32A952AF000A20681 /* TweetService.swift */; };
 		643FFD652A93F0FF00D348E1 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */; };
 		643FFD672A93FFC000D348E1 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643FFD662A93FFC000D348E1 /* CaptionTextView.swift */; };
 		645396A92A8F9246001844F2 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645396A82A8F9246001844F2 /* AuthService.swift */; };
@@ -27,7 +29,6 @@
 		64BC61EC2A8D3DCF001C008D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61EB2A8D3DCF001C008D /* LoginController.swift */; };
 		64BC61EE2A8D3ED5001C008D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61ED2A8D3ED5001C008D /* RegistrationController.swift */; };
 		64BC61F02A8D6822001C008D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC61EF2A8D6822001C008D /* Utilities.swift */; };
-		64E09C502A8E8F1300A6C8FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64E09C4F2A8E8F1300A6C8FB /* GoogleService-Info.plist */; };
 		64E09C532A8E910000A6C8FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 64E09C522A8E910000A6C8FB /* FirebaseAuth */; };
 		64E09C552A8E910000A6C8FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 64E09C542A8E910000A6C8FB /* FirebaseDatabase */; };
 		64E09C572A8E910000A6C8FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 64E09C562A8E910000A6C8FB /* FirebaseFirestore */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		6437232C2A929CB40077131C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		643CB1F12A952AAA00A20681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		643CB1F32A952AF000A20681 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		643FFD662A93FFC000D348E1 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		645396A82A8F9246001844F2 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		64BC61EB2A8D3DCF001C008D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		64BC61ED2A8D3ED5001C008D /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		64BC61EF2A8D6822001C008D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		64E09C4F2A8E8F1300A6C8FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64E09C5A2A8F654B00A6C8FB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +110,7 @@
 				64BC61CA2A8C02E4001C008D /* Assets.xcassets */,
 				64BC61CC2A8C02E4001C008D /* LaunchScreen.storyboard */,
 				64BC61CF2A8C02E4001C008D /* Info.plist */,
-				64E09C4F2A8E8F1300A6C8FB /* GoogleService-Info.plist */,
+				643CB1F12A952AAA00A20681 /* GoogleService-Info.plist */,
 			);
 			path = TwitterClone;
 			sourceTree = "<group>";
@@ -118,6 +120,7 @@
 			children = (
 				645396A82A8F9246001844F2 /* AuthService.swift */,
 				64B63B672A91D76500243836 /* UserService.swift */,
+				643CB1F32A952AF000A20681 /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -248,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64BC61CE2A8C02E4001C008D /* LaunchScreen.storyboard in Resources */,
-				64E09C502A8E8F1300A6C8FB /* GoogleService-Info.plist in Resources */,
+				643CB1F22A952AAA00A20681 /* GoogleService-Info.plist in Resources */,
 				64BC61CB2A8C02E4001C008D /* Assets.xcassets in Resources */,
 				64BC61C92A8C02E4001C008D /* Main.storyboard in Resources */,
 			);
@@ -278,6 +281,7 @@
 				64BC61EE2A8D3ED5001C008D /* RegistrationController.swift in Sources */,
 				64BC61E62A8CE0FF001C008D /* FeedController.swift in Sources */,
 				64E09C5B2A8F654B00A6C8FB /* Constants.swift in Sources */,
+				643CB1F42A952AF000A20681 /* TweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

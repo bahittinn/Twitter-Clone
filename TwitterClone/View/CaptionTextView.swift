@@ -42,6 +42,6 @@ class CaptionTextView: UITextView {
     //MARK: - Selectors
     
     @objc func handleTextInputChange() {
-        placeholderLabel.isHidden = !text.isEmpty   
+        placeholderLabel.isHidden = !text.isEmpty
     }
 }
