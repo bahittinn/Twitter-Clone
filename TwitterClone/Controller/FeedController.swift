@@ -11,7 +11,7 @@ import SDWebImage
 private let reuseIdentifier = "TweetCell"
 
 class FeedController: UICollectionViewController {
-
+    
     //MARK: - Properties
     
     private var tweets = [Tweet]() {
@@ -22,7 +22,7 @@ class FeedController: UICollectionViewController {
         didSet {
             configureLeftBarButton()
             configureUI()
-          }
+        }
     }
     
     
@@ -74,8 +74,8 @@ extension FeedController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        as! TweetCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
+        cell.tweet = tweets[indexPath.row]
         return cell
     }
 }

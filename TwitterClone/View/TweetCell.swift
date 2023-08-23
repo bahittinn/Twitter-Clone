@@ -10,6 +10,11 @@ import UIKit
 class TweetCell: UICollectionViewCell {
     
     //MARK: - Properties
+    
+    var tweet: Tweet? {
+        didSet { configure() }
+    }
+    
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -79,7 +84,7 @@ class TweetCell: UICollectionViewCell {
         addSubview(profileImageView)
         profileImageView.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
         
-        let stack = UIStackView(arrangedSubviews: [captionLabel, infoLabel])
+        let stack = UIStackView(arrangedSubviews: [infoLabel,captionLabel])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.spacing = 4
@@ -130,4 +135,12 @@ class TweetCell: UICollectionViewCell {
     
     
     //MARK: - Helpers
+    
+    func configure() {
+        guard let tweet = tweet else { return }
+        
+        captionLabel.text = tweet.caption
+        
+        
+    }
 }
