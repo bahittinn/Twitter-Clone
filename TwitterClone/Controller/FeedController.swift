@@ -34,7 +34,7 @@ class FeedController: UICollectionViewController {
     //MARK: - API
     func fetchTweets() {
         TweetService.shared.fetchTweets { tweets in
-            print("DEBUG: tweets is \(tweets[0].caption)")
+            
         }
     }
     
@@ -78,6 +78,6 @@ extension FeedController {
 
 extension FeedController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+        return CGSize(width: view.frame.width, height: 120)
     }
 }
