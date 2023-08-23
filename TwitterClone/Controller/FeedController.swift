@@ -14,6 +14,10 @@ class FeedController: UICollectionViewController {
 
     //MARK: - Properties
     
+    private var tweets = [Tweet]() {
+        didSet { collectionView.reloadData() }
+    }
+    
     var user: User? {
         didSet {
             configureLeftBarButton()
@@ -34,7 +38,7 @@ class FeedController: UICollectionViewController {
     //MARK: - API
     func fetchTweets() {
         TweetService.shared.fetchTweets { tweets in
-            
+            self.tweets = tweets
         }
     }
     
@@ -42,10 +46,7 @@ class FeedController: UICollectionViewController {
     
     func configureUI() {
         guard let user = user else { return }
-        
         view.backgroundColor = .white
-        
-      
         
         let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageView.contentMode = .scaleAspectFit
@@ -64,9 +65,12 @@ class FeedController: UICollectionViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView )
     }
 }
+
+//MARK: - UICollectionView Delegate - Datasource
+
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return tweets.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,6 +79,8 @@ extension FeedController {
         return cell
     }
 }
+
+//MARK: - UICollectionViewDelegateFlowLayout
 
 extension FeedController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
