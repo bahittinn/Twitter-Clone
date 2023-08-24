@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TweetCellDelegate: class {
+    func handleProfileImageTapped()
+}
+
 class TweetCell: UICollectionViewCell {
     
     //MARK: - Properties
@@ -14,6 +18,8 @@ class TweetCell: UICollectionViewCell {
     var tweet: Tweet? {
         didSet { configure() }
     }
+    
+    var delegate: TweetCellDelegate?
     
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -38,8 +44,8 @@ class TweetCell: UICollectionViewCell {
     }()
     
     private let infoLabel: UILabel = {
-       let label = UILabel()
-       return label
+        let label = UILabel()
+        return label
     }()
     
     private lazy var commentButton: UIButton = {
@@ -50,7 +56,7 @@ class TweetCell: UICollectionViewCell {
         button.addTarget(self, action: #selector(handleCommentTapped), for: .touchUpInside)
         return button
     }()
-
+    
     private lazy var retweetButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "retweet"), for: .normal)
@@ -121,6 +127,10 @@ class TweetCell: UICollectionViewCell {
     
     //MARK: - Selectors
     
+    @objc func handleProfileImageTapped() {
+        delegate?.handleProfileImageTapped()
+    }
+    
     @objc func handleCommentTapped() {
         print(1)
     }
@@ -136,10 +146,7 @@ class TweetCell: UICollectionViewCell {
     @objc func handleShareTapped() {
         print(4)
     }
-    
-    @objc func handleProfileImageTapped() {
-        print("tapped")
-    }
+ 
     
     //MARK: - Helpers
     
