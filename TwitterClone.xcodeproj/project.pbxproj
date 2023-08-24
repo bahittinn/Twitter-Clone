@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64182BB22A97CADC0040B358 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64182BB12A97CADC0040B358 /* TweetViewModel.swift */; };
+		64182BB42A97E63E0040B358 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64182BB32A97E63E0040B358 /* ProfileController.swift */; };
 		6437232D2A929CB40077131C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6437232C2A929CB40077131C /* User.swift */; };
 		643723302A92A5310077131C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6437232F2A92A5310077131C /* SDWebImage */; };
 		643CB1F22A952AAA00A20681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 643CB1F12A952AAA00A20681 /* GoogleService-Info.plist */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		64182BB12A97CADC0040B358 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		64182BB32A97E63E0040B358 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		6437232C2A929CB40077131C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		643CB1F12A952AAA00A20681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		643CB1F32A952AF000A20681 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				64BC61E12A8CE0D1001C008D /* NotificationsController.swift */,
 				64BC61E32A8CE0EB001C008D /* ConvarsationsController.swift */,
 				643FFD642A93F0FF00D348E1 /* UploadTweetController.swift */,
+				64182BB32A97E63E0040B358 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				64BC61F02A8D6822001C008D /* Utilities.swift in Sources */,
 				64BC61E42A8CE0EB001C008D /* ConvarsationsController.swift in Sources */,
 				64BC61E82A8CF1D0001C008D /* Extensions.swift in Sources */,
+				64182BB42A97E63E0040B358 /* ProfileController.swift in Sources */,
 				643CB1F82A95493700A20681 /* TweetCell.swift in Sources */,
 				64BC61EC2A8D3DCF001C008D /* LoginController.swift in Sources */,
 				645396A92A8F9246001844F2 /* AuthService.swift in Sources */,
