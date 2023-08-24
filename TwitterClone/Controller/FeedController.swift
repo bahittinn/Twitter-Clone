@@ -90,11 +90,11 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+//MARK: - Tweet Cell Delegate
 
 extension FeedController: TweetCellDelegate {
     func handleProfileImageTapped() {
-        print("DEBUG: clicked profile in controller")
+        let controller = ProfileController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(controller, animated: true)
     }
-    
-    
 }
