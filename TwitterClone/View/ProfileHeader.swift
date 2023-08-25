@@ -11,8 +11,10 @@ class ProfileHeader: UICollectionReusableView {
     
     //MARK: - Properties
     
+    private let filterBar = ProfileFilterView()
+    
     private lazy var containerView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .twitterBlue
         view.addSubview(backButton)
         backButton.anchor(top: view.topAnchor, left: view.leftAnchor, paddingTop: 42, paddingLeft: 16)
@@ -29,7 +31,7 @@ class ProfileHeader: UICollectionReusableView {
     }()
     
     private let profileImageView: UIImageView = {
-       let iv = UIImageView()
+        let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         iv.backgroundColor = .lightGray
@@ -47,6 +49,29 @@ class ProfileHeader: UICollectionReusableView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.addTarget(self, action: #selector(handleEditProfileFollow), for: .touchUpInside)
         return button
+    }()
+    
+    private let fullnameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.text = "Bahittin Sürmeli"
+        return label
+    }()
+    
+    private let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.textColor = .lightGray
+        label.text = "@bahittin"
+        return label
+    }()
+    
+    private let bioLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.numberOfLines = 3
+        label.text = "This is a user bio that will span more than one line  for the test purposes "
+        return label
     }()
     
     //MARK: - Lifecycle
@@ -67,7 +92,19 @@ class ProfileHeader: UICollectionReusableView {
         editButton.setDimensions(width: 100, height: 36)
         editButton.layer.cornerRadius = 36 / 2
         
+        let userDetailStack = UIStackView(arrangedSubviews: [fullnameLabel, usernameLabel, bioLabel])
+        userDetailStack.axis = .vertical
+        userDetailStack.distribution = .fillProportionally
+        userDetailStack.spacing = 4
+        
+        addSubview(userDetailStack)
+        userDetailStack.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
+        
+        addSubview(filterBar)
+        filterBar.anchor(left: leftAnchor, bottom: bottomAnchor, right:  rightAnchor, height: 50)
     }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
