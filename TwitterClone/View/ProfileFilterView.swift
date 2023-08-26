@@ -64,6 +64,11 @@ extension ProfileFilterView: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProfileFilterCell
+        
+        let option = ProfileFilterOptions(rawValue: indexPath.row)
+        
+        cell.option = option
+        
         return cell
     }
 }
