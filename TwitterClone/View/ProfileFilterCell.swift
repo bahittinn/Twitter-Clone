@@ -19,19 +19,13 @@ class ProfileFilterCell: UICollectionViewCell {
         return label
     }()
     
-    let dividerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        return view
-    }()
+    
     
     
     override var isSelected: Bool {
         didSet {
             titleLabel.font = isSelected ? UIFont.boldSystemFont(ofSize: 16) : UIFont.systemFont(ofSize: 14)
             titleLabel.textColor = isSelected ? .twitterBlue : .lightGray
-            
-            dividerView.backgroundColor = isSelected ? .twitterBlue : .lightGray
         }
     }
     
@@ -44,10 +38,6 @@ class ProfileFilterCell: UICollectionViewCell {
         
         addSubview(titleLabel)
         titleLabel.center(inView: self)
-        
-        addSubview(dividerView)
-        dividerView.anchor(top: titleLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 12)
-        dividerView.setDimensions(width: frame.width / 2 - 10, height: 1)
     }
     
     required init?(coder: NSCoder) {
