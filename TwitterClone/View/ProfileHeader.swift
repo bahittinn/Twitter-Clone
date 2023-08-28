@@ -11,6 +11,10 @@ class ProfileHeader: UICollectionReusableView {
     
     //MARK: - Properties
     
+    var user: User? {
+        didSet { configure() }
+    }
+    
     private let filterBar = ProfileFilterView()
     
     private lazy var containerView: UIView = {
@@ -131,7 +135,7 @@ class ProfileHeader: UICollectionReusableView {
         followStack.distribution = .fillEqually
         
         addSubview(followStack)
-        followStack.anchor(top: userDetailStack.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12)
+        followStack.anchor(top: userDetailStack.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 12  )
         
         addSubview(filterBar)
         filterBar.anchor(left: leftAnchor, bottom: bottomAnchor, right:  rightAnchor, height: 50)
@@ -165,6 +169,14 @@ class ProfileHeader: UICollectionReusableView {
     }
     
     //MARK: - Helpers
+    
+    func configure() {
+        guard let user = user else { return }
+        let viewModel = ProfileHeaderViewModel(user: user)
+        
+        followingLabel.attributedText = viewModel.followingString
+        followersLabel.attributedText = viewModel.followersString
+    }
     
 }
 
