@@ -20,3 +20,11 @@ enum ProfileFilterOptions: Int, CaseIterable {
         }
     }
 }
+
+struct ProfileHeaderViewModel {
+    
+    private let user: User
+    init(user: User) {
+        self.user = user
+    }
+}
