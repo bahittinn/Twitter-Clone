@@ -64,15 +64,13 @@ class ProfileHeader: UICollectionReusableView {
     private let fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "Bahittin Sürmeli"
         return label
     }()
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = .lightGray
-        label.text = "@bahittin"
         return label
     }()
     
@@ -186,6 +184,9 @@ class ProfileHeader: UICollectionReusableView {
         
         followingLabel.attributedText = viewModel.followingString
         followersLabel.attributedText = viewModel.followersString
+        
+        fullnameLabel.text = user.fullname
+        usernameLabel.text = viewModel.usernameText
     }
     
 }
