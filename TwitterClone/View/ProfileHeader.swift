@@ -36,7 +36,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.backgroundColor = .lightGray
         iv.layer.borderColor = UIColor.white.cgColor
@@ -173,6 +173,10 @@ class ProfileHeader: UICollectionReusableView {
     func configure() {
         guard let user = user else { return }
         let viewModel = ProfileHeaderViewModel(user: user)
+        
+        profileImageView.sd_setImage(with: URL(string: user.profileImageUrl))
+        
+        editButton.setTitle(viewModel.actionButtonTitle, for: .normal)
         
         followingLabel.attributedText = viewModel.followingString
         followersLabel.attributedText = viewModel.followersString
