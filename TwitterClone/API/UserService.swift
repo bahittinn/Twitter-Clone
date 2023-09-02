@@ -35,6 +35,11 @@ struct UserService {
     }
     
     func followUser(uid: String, completion: @escaping(Database, Error?) -> Void) {
-             
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        print("DEBUG: current user is \(currentUid) stared following \(uid)")
+        print("DEBUG: Uid \(uid) gained \(currentUid) as a follower ")
+        
+        //REF_USER_FOLLOWİNG.child(currentUid).updateChildValues([uid: 1])
     }
 }
